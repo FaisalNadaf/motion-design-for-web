@@ -1,30 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Exercise #15 || Animated logo</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercise #15 || Animated logo</title>
 
-	<!-- Reset -->
-	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css">
+    <!-- Reset -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/modern-normalize@2.0.0/modern-normalize.min.css"
+    />
 
-	<style>
-		.container {
-			display: grid;
-			width: 100%;
-			height: 100vh;
-			place-content: center;
-			background-color: #F6E9FE;
-		}
+    <style>
+      .container {
+        display: grid;
+        width: 100%;
+        height: 100vh;
+        place-content: center;
+        background-color: #f6e9fe;
+      }
 
-		/* Air */
-	</style>
-</head>
-<body>
-	<div class="container">
-		<!-- Air -->
-	</div>
+      /* Air */
+      svg path {
+        stroke: black;
+        stroke-width: 20;
+        stroke-linecap: round;
+      }
+      svg {
+        overflow: visible;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <!-- Air -->
+      <svg width="336" height="197" viewBox="0 0 336 197" fill="none">
+        <path
+          id="center"
+          d="M218 94.5C218 118.928 211.485 140.585 201.48 155.836C191.418 171.172 178.662 179 166 179C153.338 179 140.582 171.172 130.52 155.836C120.515 140.585 114 118.928 114 94.5C114 70.0716 120.515 48.4145 130.52 33.164C140.582 17.8282 153.338 10 166 10C178.662 10 191.418 17.8282 201.48 33.164C211.485 48.4145 218 70.0716 218 94.5Z"
+          stroke="black"
+        />
 
-	<!-- Air -->
-</body>
+        <path
+          id="right"
+          d="M322 94.5C322 118.928 315.485 140.585 305.48 155.836C295.418 171.172 282.662 179 270 179C257.338 179 244.582 171.172 234.52 155.836C224.515 140.585 218 118.928 218 94.5C218 70.0716 224.515 48.4145 234.52 33.164C244.582 17.8282 257.338 10 270 10C282.662 10 295.418 17.8282 305.48 33.164C315.485 48.4145 322 70.0716 322 94.5Z"
+          stroke="black"
+        />
+        <path
+          id="left"
+          d="M114 94.5C114 118.928 107.485 140.585 97.4795 155.836C87.4179 171.172 74.6617 179 62 179C49.3383 179 36.5821 171.172 26.5205 155.836C16.5149 140.585 10 118.928 10 94.5C10 70.0716 16.5149 48.4145 26.5205 33.164C36.5821 17.8282 49.3383 10 62 10C74.6617 10 87.4179 17.8282 97.4795 33.164C107.485 48.4145 114 70.0716 114 94.5Z"
+          stroke="black"
+        />
+      </svg>
+    </div>
+
+    <!-- Air -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script src="/[YOUR_DIRECTORY]/DrawSVGPlugin.min.js"></script>
+
+    <script>
+      gsap.set("#center,#left,#right", {
+        scale: 0,
+        transformOrigin: " 50% 50%",
+      });
+      var tl = gsap.timeline({ repeat: -1, repeatDelay: 1, yoyo: true });
+
+      tl.to("#center,#left,#right", {
+        scale: 1,
+        rotation: 360,
+        duration: 1.2,
+        ease: "none",
+      });
+
+      // tl.fromTo(
+      //   "#left",
+      //   { drawSVG: "100% 100%" },
+      //   { drawSVG: "0% 100%", duration: 1.2, ease: "power4.inOut" }
+      // );
+      // tl.fromTo(
+      //   "#left",
+      //   { drawSVG: "0% 0%" },
+      //   { drawSVG: "0% 100%", duration: 1.2, ease: "power4.inOut" }
+      // );
+      tl.to("#center ,#left ,#right", {
+        stroke: "#A41FF6",
+        duration: 0.4,
+      });
+    </script>
+  </body>
 </html>
