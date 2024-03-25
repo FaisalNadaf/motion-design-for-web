@@ -253,16 +253,28 @@
         z-index: -1;
       }
       #nature-bg-1 {
-        background-image: url("./images/svgs/nature-svg/nature_1.svg");
+        background-image: url("./images/svgs/nature2svg/layer1.svg");
       }
       #nature-bg-2 {
-        background-image: url("./images/svgs/nature-svg/nature_2.svg");
+        background-image: url("./images/svgs/nature2svg/layer2.svg");
       }
       #nature-bg-3 {
-        background-image: url("./images/svgs/nature-svg/nature_3.svg");
+        background-image: url("./images/svgs/nature2svg/layer3.svg");
       }
       #nature-bg-4 {
-        background-image: url("./images/svgs/nature-svg/nature_4.svg");
+        background-image: url("./images/svgs/nature2svg/layer4.svg");
+      }
+      #nature-bg-5 {
+        background-image: url("./images/svgs/nature2svg/layer5.svg");
+      }
+      #nature-bg-6 {
+        background-image: url("./images/svgs/nature2svg/layer6.svg");
+      }
+      #nature-bg-7 {
+        background-image: url("./images/svgs/nature2svg/layer7.svg");
+      }
+      #nature-bg-8 {
+        background-image: url("./images/svgs/nature2svg/layer8.svg");
       }
     </style>
   </head>
@@ -276,6 +288,9 @@
         <div id="nature-bg-3" data-speed="6"></div>
         <div id="nature-bg-4" data-speed="8"></div>
         <div id="nature-bg-5" data-speed="12"></div>
+        <div id="nature-bg-6" data-speed="15"></div>
+        <!-- <div id="nature-bg-7" data-speed="18"></div> -->
+        <div id="nature-bg-8" data-speed="18"></div>
       </div>
 
       <!-- End Air -->
@@ -375,7 +390,7 @@
           trigger: natureWrapper,
           start: "top top",
           scrub: true,
-          markers: true,
+          // markers: true,
         },
       });
 
@@ -385,7 +400,7 @@
         tl.to(
           bg,
           {
-            y: 10 * bgSpeed,
+            y: 40 * bgSpeed,
             duration: 2,
           },
           0

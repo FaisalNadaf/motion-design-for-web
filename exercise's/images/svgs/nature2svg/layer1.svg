@@ -1,0 +1,21 @@
+<svg width="750" height="500" viewBox="0 0 750 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+<rect width="750" height="500" fill="#1E1E1E"/>
+<g id="nature__2" clip-path="url(#clip0_0_1)">
+<g id="layers">
+<g id="layer_8">
+<g id="Group">
+<path id="Vector" d="M750 0H0V500H750V0Z" fill="url(#paint0_linear_0_1)"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<linearGradient id="paint0_linear_0_1" x1="375" y1="166.094" x2="375" y2="22.094" gradientUnits="userSpaceOnUse">
+<stop stop-color="#FBB294"/>
+<stop offset="1" stop-color="#A4A7B9"/>
+</linearGradient>
+<clipPath id="clip0_0_1">
+<rect width="750" height="500" fill="white"/>
+</clipPath>
+</defs>
+</svg>
